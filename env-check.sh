@@ -6,3 +6,10 @@ if [ -z "$parham"]; then
 else
   echo $parham
 fi
+
+# check if a file exists
+#touch .env
+if [ ! -f ".env" ]; then
+  echo ".env doesn't exist"
+  exit 1
+fi
