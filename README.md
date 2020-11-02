@@ -11,3 +11,6 @@ script is called a subshell and doesn't know that you have set a=b in the parent
 to be aware of this you have to use export command.<br/>
 **Notice**: **every command** forks a child process that's why if you set a=b then run the command 'env' you can't find 
 the key value pair in it cause 'env' runs a subshell.
+
+#### Set environment variables from file of key/value pairs
+check pairs.sh
