@@ -14,3 +14,17 @@ the key value pair in it cause 'env' runs a subshell.
 
 #### Set environment variables from file of key/value pairs
 check pairs.sh
+
+# Env
+It's important to know that every environment variable can only be seen in the same shell it is defined or at most in it's
+subshells. If it's still ambiguous open a terminal and export something then run env command you can see the environment 
+you just set now open another terminal and run the env command agan, tadaaa it's not present any more. Now you may ask 
+what about the environment variables that are always there how are they set they are set in config file of shell so 
+everytime you open a terminal the config file is read and those environments are set.
+
+# shell vs bash
+Yes they are different, you may not know that if you always run your bash scripts on your own computer, trouble begins 
+when you want to run the script on other computers, that's what happened for me I wrote a bash script that was working 
+fine local but when I pushed the file in gitlab and tried to run that on a server it failed so pay attention.<br/>
+I don't know much more about them but if you want your script to be portable `sh` is portable across POSIX systems even 
+if they happen not to have `bash`, they are required to have `sh`.
