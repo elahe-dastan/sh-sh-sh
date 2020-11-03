@@ -23,8 +23,13 @@ what about the environment variables that are always there how are they set they
 everytime you open a terminal the config file is read and those environments are set.
 
 # shell vs bash
-Yes they are different, you may not know that if you always run your bash scripts on your own computer, trouble begins 
+Yes they are different, you may not know that, if you always run your bash scripts on your own computer, trouble begins 
 when you want to run the script on other computers, that's what happened for me I wrote a bash script that was working 
-fine local but when I pushed the file in gitlab and tried to run that on a server it failed so pay attention.<br/>
+fine locally but when I pushed the file in gitlab and tried to run that on a server it failed so pay attention.<br/>
 I don't know much more about them but if you want your script to be portable `sh` is portable across POSIX systems even 
-if they happen not to have `bash`, they are required to have `sh`.
+if they happen not to have `bash`, they are required to have `sh`.<br/>
+
+### sed
+sed command is mostly used for substitution. Look at this example `sed 's/a/b/' file.txt` the "s" specifies the substitution 
+operation, the "/" are delimiters.**Note**:the sed command replaces the first occurrence of the pattern in each line, to 
+replace all the occurrences use `sed 's/;/,/g' sed.txt`. To change the file use `-i`.
